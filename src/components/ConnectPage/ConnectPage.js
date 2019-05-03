@@ -23,8 +23,8 @@ class ConnectPage extends Component {
     render() {
         let wordpressRedirectUrl = 'http://localhost:5000/wordpress/callback_wordpress`'
         let wordpressClientId = '65413'
-        let podbeanRedirectUrl = 'https://hermes-host.herokuapp.com/podbean/callback_podbean'
-        let podbeanClientID = '7ae314124aac5c7de467d'
+        let podbeanRedirectUrl = 'https://hermes-group-marifel.herokuapp.com/podbean/callback_podbean'
+        let podbeanClientID = '55ceb02de1d1d7efa69c1'
         return (
             <>
                 <Grid

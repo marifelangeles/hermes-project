@@ -4,9 +4,9 @@ const pool = require('../modules/pool');
 var request = require('request'); // "Request" library
 const router = express.Router();
 
-var client_id = '7ae314124aac5c7de467d'; // Your client id
+var client_id = '55ceb02de1d1d7efa69c1'; // Your client id
 var client_secret = process.env.CLIENT_SECRET_PODBEAN; // Your secret
-var redirect_uri = 'https://hermes-host.herokuapp.com/podbean/callback_podbean'; // Your redirect uri
+var redirect_uri = 'https://hermes-group-marifel.herokuapp.com/podbean/callback_podbean'; // Your redirect uri
 
 // router.get('/callback_podbean', function (req, res){
 //   console.log('get callback podbean was hit'),
@@ -80,7 +80,7 @@ router.get('/callback_podbean', function (req, res, next) {
         let access_token = body.access_token
         // let expires = body.expires_in
         checkStorage(access_token, userId)// this updates the database with the token.
-        res.redirect('http://localhost:3000/#/connect')
+        res.redirect('https://hermes-group-marifel.herokuapp.com/#/connect')
         // to DB
       })
     })
@@ -119,7 +119,7 @@ router.post('/post_episode', function (req, res) {
         };
         request.post(authOptions, function (error, response, body) {
           console.log('post podcast was hit? logging response', response)
-          res.redirect('http://localhost:3000/#/home') //this is a local host for wordpress instead of / but for presentation we will have to use redirect
+          res.redirect('https://hermes-group-marifel.herokuapp.com/#/home') //this is a local host for wordpress instead of / but for presentation we will have to use redirect
         })
       }
       else {

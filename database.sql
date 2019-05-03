@@ -12,8 +12,9 @@ CREATE TABLE "storage"(
 "id" SERIAL PRIMARY KEY,
 "user_id" INT REFERENCES "user",
 "podbean" VARCHAR,
-"wordpress" VARCHAR
-
+"wordpress" VARCHAR,
+"blog_id" VARCHAR (200),
+"blog_url" VARCHAR (200)
 );
 CREATE TABLE "current_user"(
 "id" SERIAL PRIMARY KEY,
